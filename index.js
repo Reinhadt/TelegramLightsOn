@@ -12,7 +12,7 @@ const bot = new TelegramBot(token, {polling: true})
 bot.onText(/\/encender/, (msg) => {
 
     //url para hacer petición
-    let url = `http://192.168.1.66/leds/enciende.php`;
+    let url = `http://ledspi.ddns.net/leds/enciende.php`;
 
     //request a la api
     return request(url, (err, resp, body)=>{
@@ -25,7 +25,7 @@ bot.onText(/\/encender/, (msg) => {
 bot.onText(/\/apagar/, (msg) => {
 
     //url para hacer petición
-    let url = `http://192.168.1.66/leds/apaga.php`;
+    let url = `http://ledspi.ddns.net/leds/apaga.php`;
 
     //request a la api
     return request(url, (err, resp, body)=>{
