@@ -17,7 +17,11 @@ bot.onText(/\/encender/, (msg) => {
     //request a la api
     return request(url, (err, resp, body)=>{
         console.log(body)
-        bot.sendMessage(msg.chat.id, "Encendido correctamente :)")
+        if(err){
+            bot.sendMessage(msg.chat.id, "Algo anduvo mal, intenta más tarde :( ")
+        }else{
+            bot.sendMessage(msg.chat.id, "Apagado Correctamente :)")
+        }
     })
 
 })
@@ -30,7 +34,12 @@ bot.onText(/\/apagar/, (msg) => {
     //request a la api
     return request(url, (err, resp, body)=>{
         console.log(body)
-        bot.sendMessage(msg.chat.id, "Apagado Correctamente :)")
+        if(err){
+            bot.sendMessage(msg.chat.id, "Algo anduvo mal, intenta más tarde :( ")
+        }else{
+            bot.sendMessage(msg.chat.id, "Apagado Correctamente :)")
+        }
+
     })
 
 })
